@@ -1,5 +1,5 @@
 {% set name = "tensorflow-datasets" %}
-{% set version = "4.3.0" %}
+{% set version = "4.4.0" %}
 
 
 package:
@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 476f8c45354db62ece48aa12e7f73152ca077c5a5ee8a42980faeb8445fb6e26
+  url: https://github.com/tensorflow/datasets/releases/tag/v{{ version }}
+  sha256: 9b7bedffa91bab82533f269eb50cac4f8d4971fd9b2011959d7706291684f7da
 
 build:
   number: 0
