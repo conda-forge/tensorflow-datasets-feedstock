@@ -7,7 +7,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/tensorflow/datasets/releases/tag/v{{ version }}
+  url: https://github.com/tensorflow/datasets/archive/refs/tags/v{{ version }}.tar.gz
   sha256: 9b7bedffa91bab82533f269eb50cac4f8d4971fd9b2011959d7706291684f7da
 
 build:
