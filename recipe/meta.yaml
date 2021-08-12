@@ -57,7 +57,5 @@ about:
 
 extra:
   recipe-maintainers:
+    - JennaLipscomb
     - mxr-conda
-    - rluria14
-    - oblute
-    - ndmaxar
