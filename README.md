@@ -15,7 +15,7 @@ Current build status
 
 <table><tr><td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=&branchName=master">
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=12615&branchName=master">
         <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/tensorflow-datasets-feedstock?branchName=master">
       </a>
     </td>
@@ -115,8 +115,6 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@JennaLipscomb](https://github.com/JennaLipscomb/)
 * [@mxr-conda](https://github.com/mxr-conda/)
-* [@ndmaxar](https://github.com/ndmaxar/)
-* [@oblute](https://github.com/oblute/)
-* [@rluria14](https://github.com/rluria14/)
 

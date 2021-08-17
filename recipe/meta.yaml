@@ -1,5 +1,5 @@
 {% set name = "tensorflow-datasets" %}
-{% set version = "4.3.0" %}
+{% set version = "4.4.0" %}
 
 
 package:
@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 476f8c45354db62ece48aa12e7f73152ca077c5a5ee8a42980faeb8445fb6e26
+  url: https://github.com/tensorflow/datasets/archive/refs/tags/v{{ version }}.tar.gz
+  sha256: 5ae79c955594524ff98e75e2d78ba071551388fce74d5932a03d636432f44afd
 
 build:
   number: 0
@@ -38,7 +38,7 @@ requirements:
     - tensorflow >=2.1
     - termcolor
     - tqdm
-    - typing-extensions
+    - typing-extensions ==3.7.4
 
 test:
   imports:
@@ -57,7 +57,5 @@ about:
 
 extra:
   recipe-maintainers:
+    - JennaLipscomb
     - mxr-conda
-    - rluria14
-    - oblute
-    - ndmaxar
