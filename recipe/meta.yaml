@@ -1,5 +1,5 @@
 {% set name = "tensorflow-datasets" %}
-{% set version = "4.4.0" %}
+{% set version = "4.5.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/tensorflow/datasets/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 5ae79c955594524ff98e75e2d78ba071551388fce74d5932a03d636432f44afd
+  sha256: 1b3b2ead11fe7a43b137c1df13c1c5937f7cab54def9e966390c3638b3f38278
 
 build:
   number: 0
