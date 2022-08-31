@@ -40,6 +40,7 @@ requirements:
     - typing-extensions >=3.7.4
     - etils
     - zipp
+    - toml
 
 test:
   imports:
