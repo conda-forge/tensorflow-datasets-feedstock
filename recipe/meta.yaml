@@ -19,28 +19,24 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python >=3.7
   run:
     - absl-py
-    - attrs >=18.1.0
-    - dataclasses
     - dill
-    - future
-    - importlib_resources
+    - etils
+    - zipp
     - numpy
     - promise
     - protobuf >=3.12.2
-    - python >=3.6
     - requests >=2.19.0
-    - six >=1.15.0
+    - six
     - tensorflow-metadata
-    - tensorflow >=2.1
     - termcolor
-    - tqdm
-    - typing-extensions >=3.7.4
-    - etils
-    - zipp
     - toml
+    - tqdm
+    - typing-extensions
+    - importlib_resources
+    - python >=3.7
 
 test:
   imports:
