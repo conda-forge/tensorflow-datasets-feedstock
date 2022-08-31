@@ -32,12 +32,15 @@ requirements:
     - protobuf >=3.12.2
     - python >=3.6
     - requests >=2.19.0
-    - six 1.15.*
+    - six >=1.15.0
     - tensorflow-metadata
     - tensorflow >=2.1
     - termcolor
     - tqdm
-    - typing-extensions ==3.7.4
+    - typing-extensions >=3.7.4
+    - etils
+    - zipp
+    - 
 
 test:
   imports:
