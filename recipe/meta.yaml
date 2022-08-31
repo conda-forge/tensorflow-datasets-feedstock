@@ -1,6 +1,5 @@
 {% set name = "tensorflow-datasets" %}
-{% set version = "4.4.0" %}
-
+{% set version = "4.6.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +7,7 @@ package:
 
 source:
   url: https://github.com/tensorflow/datasets/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 5ae79c955594524ff98e75e2d78ba071551388fce74d5932a03d636432f44afd
+  sha256: 42fcb55829f96cfc7f0ee74a502950b052149811bb867371880b8235e7d8d6d3
 
 build:
   number: 0
@@ -20,25 +19,25 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python >=3.7
   run:
-    - absl-py
-    - attrs >=18.1.0
-    - dataclasses
+    - absl-py >=1
     - dill
-    - future
-    - importlib_resources
+    - etils
+    - zipp
     - numpy
     - promise
     - protobuf >=3.12.2
-    - python >=3.6
     - requests >=2.19.0
-    - six 1.15.*
+    - six
     - tensorflow-metadata
-    - tensorflow >=2.1
     - termcolor
+    - toml
     - tqdm
-    - typing-extensions ==3.7.4
+    - typing-extensions
+    - importlib_resources
+    - tensorflow >=2
+    - python >=3.7
 
 test:
   imports:
@@ -59,3 +58,4 @@ extra:
   recipe-maintainers:
     - JennaLipscomb
     - mxr-conda
+    - ngam
