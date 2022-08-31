@@ -40,7 +40,6 @@ requirements:
     - typing-extensions >=3.7.4
     - etils
     - zipp
-    - 
 
 test:
   imports:
@@ -61,3 +60,4 @@ extra:
   recipe-maintainers:
     - JennaLipscomb
     - mxr-conda
+    - ngam
