@@ -10,7 +10,7 @@ source:
   sha256: ed7c3b959d10ba762137e18b93631ab42f4ed0915bc3d9ce98ee66eef9c61418
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - tfds = tensorflow_datasets.scripts.cli.main:launch_cli
@@ -27,7 +27,10 @@ requirements:
     - zipp
     - numpy
     - promise
-    - protobuf >=3.12.2
+    # remove protobuf as a dep
+    # rely on one from tensorflow
+    # xref https://github.com/conda-forge/tensorflow-feedstock/issues/278
+    # - protobuf >=3.12.2
     - requests >=2.19.0
     - six
     - tensorflow-metadata
