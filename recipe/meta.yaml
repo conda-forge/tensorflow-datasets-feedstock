@@ -48,9 +48,9 @@ test:
     - tensorflow_datasets.audio
   commands:
     - pip check
+    - CONDA_OVERRIDE_CUDA=11.2 mamba install "tensorflow>=2.10.0=cuda112*"
   requires:
     - pip
-    - CONDA_OVERRIDE_CUDA=11.2 mamba install "tensorflow>=2.10.0=cuda112*"
 
 about:
   home: https://pypi.org/project/tensorflow-datasets/
