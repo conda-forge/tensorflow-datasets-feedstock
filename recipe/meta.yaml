@@ -1,5 +1,5 @@
 {% set name = "tensorflow-datasets" %}
-{% set version = "4.7.0" %}
+{% set version = "4.8.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/tensorflow/datasets/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: ed7c3b959d10ba762137e18b93631ab42f4ed0915bc3d9ce98ee66eef9c61418
+  sha256: acad77e5fe8145884c106a405c6e57eed4cc13f6fa3ed9e29e381989b7e62e85
 
 build:
   number: 0
@@ -38,6 +38,9 @@ requirements:
     - importlib_resources
     - tensorflow >=2
     - python >=3.7
+    - click
+    - psutil
+    - dm-tree
 
 test:
   imports:
