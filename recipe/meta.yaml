@@ -29,7 +29,7 @@ requirements:
     - promise
     - protobuf >=3.12.2
     - requests >=2.19.0
-    - six
+    - wrapt
     - tensorflow-metadata
     - termcolor
     - toml
