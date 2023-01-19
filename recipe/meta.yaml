@@ -1,5 +1,5 @@
 {% set name = "tensorflow-datasets" %}
-{% set version = "4.8.1" %}
+{% set version = "4.8.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/tensorflow/datasets/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 0a72a4dedf491722ffa66a18c8fb0afd526d2c53a167f185fff44c438788d40a
+  sha256: 228806a396c56ca798114807f92b48be0fe03e2bcfa09bbb86fe6fa012210c86
 
 build:
   number: 0
@@ -29,7 +29,7 @@ requirements:
     - promise
     - protobuf >=3.12.2
     - requests >=2.19.0
-    - six
+    - wrapt
     - tensorflow-metadata
     - termcolor
     - toml
