@@ -1,11 +1,11 @@
-About tensorflow-datasets
-=========================
+About tensorflow-datasets-feedstock
+===================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/tensorflow-datasets-feedstock/blob/main/LICENSE.txt)
 
 Home: https://pypi.org/project/tensorflow-datasets/
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/tensorflow-datasets-feedstock/blob/main/LICENSE.txt)
 
 Summary: tensorflow/datasets is a library of datasets ready to use with TensorFlow.
 
