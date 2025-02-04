@@ -18,8 +18,9 @@ build:
 
 requirements:
   host:
-    - pip
     - python {{ python_min }}
+    - pip
+    - setuptools
   run:
     - python >={{ python_min }}
     - absl-py >=1
