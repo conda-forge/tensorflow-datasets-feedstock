@@ -27,6 +27,7 @@ requirements:
     - click
     - dm-tree
     - etils
+    - typing_extensions
     - numpy
     - promise
     - protobuf >=3.12.2
