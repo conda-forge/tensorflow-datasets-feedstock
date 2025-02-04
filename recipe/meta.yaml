@@ -52,6 +52,7 @@ test:
   requires:
     - pip
     - python {{ python_min }}
+    - tensorflow
 
 about:
   home: https://pypi.org/project/tensorflow-datasets/
