@@ -14,7 +14,7 @@ build:
   noarch: python
   entry_points:
     - tfds = tensorflow_datasets.scripts.cli.main:launch_cli
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
@@ -40,8 +40,7 @@ requirements:
     - wrapt
     - importlib_resources
     - dill
-  run_constrained:
-    - tensorflow >=2
+    - tensorflow >=2.1
 
 test:
   imports:
@@ -52,7 +51,6 @@ test:
   requires:
     - pip
     - python {{ python_min }}
-    - tensorflow
 
 about:
   home: https://pypi.org/project/tensorflow-datasets/
