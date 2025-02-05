@@ -7,7 +7,11 @@ Home: https://pypi.org/project/tensorflow-datasets/
 
 Package license: Apache-2.0
 
-Summary: tensorflow/datasets is a library of datasets ready to use with TensorFlow.
+Summary: TensorFlow Datasets is a collection of datasets ready to use, with TensorFlow or other Python ML frameworks, such as Jax.
+
+Development: https://github.com/tensorflow/datasets
+
+Documentation: https://www.tensorflow.org/datasets/overview
 
 Current build status
 ====================
