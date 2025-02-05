@@ -1,5 +1,5 @@
 {% set name = "tensorflow-datasets" %}
-{% set version = "4.9.7" %}
+{% set version = "4.9.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/tensorflow/datasets/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 918b74f142151a445f90bc72605e7d6837aed241b0759fe55e32ede11b6126ac
+  sha256: 21c0a717ff5eac93a405ddbdb603b69a376e45c7220d24f0bd75a743c2bb5b6c
 
 build:
   number: 0
@@ -27,7 +27,7 @@ requirements:
     # - array_record >=0.5.0  # [linux]
     - click
     - dm-tree
-    - etils >=1.6.0
+    - etils >=0.9.0
     - typing_extensions
     - fsspec
     - importlib_resources
@@ -45,7 +45,6 @@ requirements:
     - toml
     - tqdm
     - wrapt
-    - dill
   run_constrained:
     - tensorflow >=2.1
 
