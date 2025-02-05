@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/tensorflow-datasets-{{ version }}.tar.gz
-  sha256: 948d7a68ee693d9709cbfe955f97344b98647e5512e0e42dd2a61f3e7925d68b
+  sha256: 90390077dde2c9e4e240754ddfc5bb50b482946d421c8a34677c3afdb0463427
 
 build:
   number: 0
