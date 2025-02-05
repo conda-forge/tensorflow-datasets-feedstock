@@ -6,8 +6,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/tensorflow/datasets/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 21c0a717ff5eac93a405ddbdb603b69a376e45c7220d24f0bd75a743c2bb5b6c
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/tensorflow_datasets-{{ version }}.tar.gz
+  sha256: 948d7a68ee693d9709cbfe955f97344b98647e5512e0e42dd2a61f3e7925d68b
 
 build:
   number: 0
