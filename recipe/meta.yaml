@@ -45,6 +45,7 @@ requirements:
     - toml
     - tqdm
     - wrapt
+    - dill
   run_constrained:
     - tensorflow >=2.1
 
@@ -57,18 +58,6 @@ test:
   requires:
     - python {{ python_min }}
     - pip
-    - dill
-    - jax ==0.4.28
-    - jupyter
-    - pytest
-    - pytest-shard
-    - pytest-xdist
-    - apache-beam
-    - conllu
-    - mlcroissant >=1.0.9
-    - pandas
-    - pydub
-    - pyyaml
 
 about:
   home: https://pypi.org/project/tensorflow-datasets/
