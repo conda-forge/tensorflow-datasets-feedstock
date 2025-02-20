@@ -14,10 +14,10 @@ build:
   noarch: python
   entry_points:
     - tfds = tensorflow_datasets.scripts.cli.main:launch_cli
-  script:
-    - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  script: |
+    {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
     # Remove when updated from v4.9.3: https://github.com/tensorflow/datasets/commit/3f27a2c222d5490be6e04ce127152e15af5becb1
-    - sed -i 's/^Requires-Dist: array_record.*/Requires-Dist: array_record>=0.5.0; platform_system == "Linux"/' ${SP_DIR}/tensorflow_datasets-${PKG_VERSION}.dist-info/METADATA
+    sed -i 's/^Requires-Dist: array_record.*/Requires-Dist: array_record>=0.5.0; platform_system == "Linux"/' ${SP_DIR}/tensorflow_datasets-${PKG_VERSION}.dist-info/METADATA
 
 requirements:
   host:
