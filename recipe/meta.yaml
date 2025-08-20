@@ -54,6 +54,8 @@ test:
   imports:
     - tensorflow_datasets
     - tensorflow_datasets.audio
+  commands:
+    - pip list
   requires:
     - python {{ python_min }}
     - pip
