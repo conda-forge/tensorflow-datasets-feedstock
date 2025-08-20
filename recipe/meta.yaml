@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/tensorflow-datasets-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/tensorflow_datasets-{{ version }}.tar.gz
   sha256: 9cb245cad97e7d227f0b8e006491cfef860ff8d4b9d84a3c68f8b96d6295355e
 
 build:
