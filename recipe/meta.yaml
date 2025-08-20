@@ -1,64 +1,77 @@
 {% set name = "tensorflow-datasets" %}
-{% set version = "4.8.3" %}
+{% set version = "4.9.9" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/tensorflow/datasets/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 0eb74eec3a42af7f78c370796d1aae91fd54f12f0ba631bdf42a0252052fba5e
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/tensorflow_datasets-{{ version }}.tar.gz
+  sha256: 9cb245cad97e7d227f0b8e006491cfef860ff8d4b9d84a3c68f8b96d6295355e
 
 build:
   number: 0
   noarch: python
   entry_points:
     - tfds = tensorflow_datasets.scripts.cli.main:launch_cli
-  script: {{ PYTHON }} -m pip install . -vv
+  script: |
+    ${PYTHON} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
+    - python {{ python_min }}
     - pip
-    - python >=3.7
+    - setuptools
   run:
+    - python >={{ python_min }}
     - absl-py >=1
-    - dill
-    - etils
+    - click
+    - dm-tree
+    - etils >=0.9.0
+    - typing_extensions
+    - fsspec
+    - importlib_resources
     - zipp
+    - immutabledict
     - numpy
     - promise
-    - protobuf >=3.12.2
+    - protobuf >=3.20
+    - psutil
+    - pyarrow
     - requests >=2.19.0
-    - wrapt
+    - simple-parsing
     - tensorflow-metadata
     - termcolor
     - toml
     - tqdm
-    - typing-extensions
-    - importlib_resources
-    - tensorflow >=2
-    - python >=3.7
-    - click
-    - psutil
-    - dm-tree
+    - wrapt
+  run_constrained:
+    - tensorflow >=2.1
+    - array-record >=0.5.0
 
 test:
   imports:
     - tensorflow_datasets
     - tensorflow_datasets.audio
   commands:
-    - pip check
+    - pip list
   requires:
+    - python {{ python_min }}
     - pip
 
 about:
   home: https://pypi.org/project/tensorflow-datasets/
-  summary: tensorflow/datasets is a library of datasets ready to use with TensorFlow.
+  summary: TensorFlow Datasets is a collection of datasets ready to use, with TensorFlow or other Python ML frameworks, such as Jax.
   license: Apache-2.0
+  license_family: Apache
   license_file: LICENSE
+  dev_url: https://github.com/tensorflow/datasets
+  doc_url: https://www.tensorflow.org/datasets/overview
 
 extra:
   recipe-maintainers:
     - JennaLipscomb
     - mxr-conda
     - ngam
+    - ehfd
