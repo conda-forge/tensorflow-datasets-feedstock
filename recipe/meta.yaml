@@ -1,5 +1,5 @@
 {% set name = "tensorflow-datasets" %}
-{% set version = "4.9.3" %}
+{% set version = "4.9.9" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/tensorflow-datasets-{{ version }}.tar.gz
-  sha256: 90390077dde2c9e4e240754ddfc5bb50b482946d421c8a34677c3afdb0463427
+  sha256: 9cb245cad97e7d227f0b8e006491cfef860ff8d4b9d84a3c68f8b96d6295355e
 
 build:
   number: 0
@@ -16,8 +16,6 @@ build:
     - tfds = tensorflow_datasets.scripts.cli.main:launch_cli
   script: |
     ${PYTHON} -m pip install . -vv --no-deps --no-build-isolation
-    # Remove when updated from v4.9.3: https://github.com/tensorflow/datasets/commit/3f27a2c222d5490be6e04ce127152e15af5becb1
-    sed -i 's/^Requires-Dist: array_record.*/Requires-Dist: array_record>=0.5.0; platform_system == "Linux"/' ${SP_DIR}/tensorflow_datasets-${PKG_VERSION}.dist-info/METADATA
 
 requirements:
   host:
@@ -27,7 +25,7 @@ requirements:
   run:
     - python >={{ python_min }}
     - absl-py >=1
-    # - array_record >=0.5.0  # [linux]
+    - array_record >=0.5.0  # [linux]
     - click
     - dm-tree
     - etils >=0.9.0
