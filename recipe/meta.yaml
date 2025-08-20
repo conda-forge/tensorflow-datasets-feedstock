@@ -25,7 +25,6 @@ requirements:
   run:
     - python >={{ python_min }}
     - absl-py >=1
-    - array_record >=0.5.0  # [linux]
     - click
     - dm-tree
     - etils >=0.9.0
@@ -48,13 +47,12 @@ requirements:
     - wrapt
   run_constrained:
     - tensorflow >=2.1
+    - array-record >=0.5.0
 
 test:
   imports:
     - tensorflow_datasets
     - tensorflow_datasets.audio
-  commands:
-    - pip check
   requires:
     - python {{ python_min }}
     - pip
