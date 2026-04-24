@@ -10,7 +10,7 @@ source:
   sha256: 0eb74eec3a42af7f78c370796d1aae91fd54f12f0ba631bdf42a0252052fba5e
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - tfds = tensorflow_datasets.scripts.cli.main:launch_cli
@@ -19,7 +19,7 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python {{ python_min }}
   run:
     - absl-py >=1
     - dill
@@ -37,7 +37,7 @@ requirements:
     - typing-extensions
     - importlib_resources
     - tensorflow >=2
-    - python >=3.7
+    - python >={{ python_min }}
     - click
     - psutil
     - dm-tree
@@ -50,6 +50,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://pypi.org/project/tensorflow-datasets/
